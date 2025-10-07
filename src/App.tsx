@@ -11,13 +11,26 @@ import Layout from "./components/Layout.tsx";
 // import Counter from "./components/Counter.tsx";
 // import CounterWithMoreStates from "./components/CounterWithMoreStates.tsx";
 // import CounterAdvanced from "./components/CounterAdvanced.tsx";
-import CounterWithCustomHook from "./components/CounterWithCustomHook.tsx";
+// import CounterWithCustomHook from "./components/CounterWithCustomHook.tsx";
+import NameChangerWithEffect from "./components/NameChangerWithEffect.tsx";
+// import {useEffect} from "react";
 // import NameChanger from "./components/NameChanger.tsx";
 // import FunctionalComponentWithState from "./components/FunctionalComponentWithState.tsx";
 // import ClassComponentWithState from "./components/ClassComponentWithState.tsx";
 
 function App() {
 
+
+
+    // useEffect(setup,[]);
+    //
+    // useEffect(() =>{
+    //     //setup
+    //     return() => {
+    //         //clean up
+    //     }
+    //
+    // },[]);
 
   return (
     <>
@@ -48,7 +61,8 @@ function App() {
                  {/*<NameChanger />*/}
 
                  {/*<CounterWithMoreStates />*/}
-                 <CounterWithCustomHook/>
+                 {/*<CounterWithCustomHook/>*/}
+                 <NameChangerWithEffect />
 
              </Layout>
 
