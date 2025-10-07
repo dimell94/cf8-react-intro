@@ -12,7 +12,9 @@ import Layout from "./components/Layout.tsx";
 // import CounterWithMoreStates from "./components/CounterWithMoreStates.tsx";
 // import CounterAdvanced from "./components/CounterAdvanced.tsx";
 // import CounterWithCustomHook from "./components/CounterWithCustomHook.tsx";
-import NameChangerWithEffect from "./components/NameChangerWithEffect.tsx";
+// import NameChangerWithEffect from "./components/NameChangerWithEffect.tsx";
+// import {useEffect} from "react";
+import Timer from "./components/Timer.tsx";
 // import {useEffect} from "react";
 // import NameChanger from "./components/NameChanger.tsx";
 // import FunctionalComponentWithState from "./components/FunctionalComponentWithState.tsx";
@@ -20,6 +22,16 @@ import NameChangerWithEffect from "./components/NameChangerWithEffect.tsx";
 
 function App() {
 
+    // useEffect(() => {
+    //     const id = setInterval(() => console.log("tick"), 1000)
+    //     return() => clearInterval(id)
+    // }, []);
+    //
+    // useEffect(() => {
+    //     let counter: number = 1;
+    //     const id : number = setInterval(() => console.log(counter++), 1000)
+    //     return () => clearInterval(id)
+    // }, []);
 
 
     // useEffect(setup,[]);
@@ -62,7 +74,8 @@ function App() {
 
                  {/*<CounterWithMoreStates />*/}
                  {/*<CounterWithCustomHook/>*/}
-                 <NameChangerWithEffect />
+                 {/*<NameChangerWithEffect />*/}
+                 <Timer />
 
              </Layout>
 
