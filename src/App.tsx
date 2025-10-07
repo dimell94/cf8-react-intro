@@ -16,7 +16,8 @@ import Layout from "./components/Layout.tsx";
 // import {useEffect} from "react";
 // import Timer from "./components/Timer.tsx";
 // import WindowSize from "./components/WindowSize.tsx";
-import FocusInput from "./components/FocusInput.tsx";
+// import FocusInput from "./components/FocusInput.tsx";
+import PreviousValue from "./components/PreviousValue.tsx";
 // import {useEffect} from "react";
 // import NameChanger from "./components/NameChanger.tsx";
 // import FunctionalComponentWithState from "./components/FunctionalComponentWithState.tsx";
@@ -79,7 +80,8 @@ function App() {
                  {/*<NameChangerWithEffect />*/}
                  {/*<Timer />*/}
                  {/*<WindowSize />*/}
-                 <FocusInput />
+                 {/*<FocusInput />*/}
+                 <PreviousValue />
 
              </Layout>
 
