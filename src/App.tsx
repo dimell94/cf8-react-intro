@@ -7,7 +7,7 @@
 // import ArrowFunctionalComponentWIthProp from "./components/ArrowFunctionalComponentWIthProp.tsx";
 // import ArrowFunctionalComponentWIthPropType from "./components/ArrowFunctionalComponentWIthPropType.tsx";
 // import Card from "./components/Card.tsx";
-import Layout from "./components/Layout.tsx";
+// import Layout from "./components/Layout.tsx";
 // import Counter from "./components/Counter.tsx";
 // import CounterWithMoreStates from "./components/CounterWithMoreStates.tsx";
 // import CounterAdvanced from "./components/CounterAdvanced.tsx";
@@ -18,13 +18,26 @@ import Layout from "./components/Layout.tsx";
 // import WindowSize from "./components/WindowSize.tsx";
 // import FocusInput from "./components/FocusInput.tsx";
 // import PreviousValue from "./components/PreviousValue.tsx";
-import CounterWithRef from "./components/CounterWithRef.tsx";
+// import CounterWithRef from "./components/CounterWithRef.tsx";
+import {useEffect} from "react";
+import {BrowserRouter, Route, Routes} from "react-router";
+import NameChanger from "./components/NameChanger.tsx";
+import HomePage from "./pages/HomePage.tsx";
 // import {useEffect} from "react";
 // import NameChanger from "./components/NameChanger.tsx";
 // import FunctionalComponentWithState from "./components/FunctionalComponentWithState.tsx";
 // import ClassComponentWithState from "./components/ClassComponentWithState.tsx";
 
 function App() {
+
+    useEffect(() => {
+        history.pushState({page: 1}, "", "/page")
+
+
+        window.onpopstate =  (e) => {
+            console.log(e.state);
+        }
+    })
 
     // useEffect(() => {
     //     const id = setInterval(() => console.log("tick"), 1000)
@@ -64,7 +77,7 @@ function App() {
         {/*    />*/}
         {/*</Card>*/}
 
-             <Layout>
+             {/*<Layout>*/}
                  {/*<ArrowFunctionalComponentWIthPropType title="is a functional component with 2 props" description=*/}
                  {/*    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, et."*/}
                  {/*/>*/}
@@ -83,9 +96,18 @@ function App() {
                  {/*<WindowSize />*/}
                  {/*<FocusInput />*/}
                  {/*<PreviousValue />*/}
-                 <CounterWithRef />
+                 {/*<CounterWithRef />*/}
 
-             </Layout>
+             {/*</Layout>*/}
+
+
+        <BrowserRouter>
+            <Routes>
+                <Route index element={<HomePage />} />
+                <Route path="name-changer" element={<NameChanger />} />
+
+            </Routes>
+        </BrowserRouter>
 
 
     </>
