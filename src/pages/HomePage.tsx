@@ -1,4 +1,5 @@
 import {Link} from "react-router";
+import {useEffect} from "react";
 
 const HomePage = () => {
     const links = [
@@ -6,6 +7,10 @@ const HomePage = () => {
         {path: "/name-changer", label: "Name Changer Example"},
         {path: "/examples/timer", label: "Timer Example"}
     ]
+
+    useEffect(() => {
+        document.title = "cf8 homepage"
+    },[])
 
     return (
         <>
