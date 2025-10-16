@@ -25,6 +25,7 @@ import NameChanger from "./components/NameChanger.tsx";
 import HomePage from "./pages/HomePage.tsx";
 import Timer from "./components/Timer.tsx";
 import RouterLayout from "./components/RouterLayout.tsx";
+import UserPage from "./pages/UserPage.tsx";
 // import Layout from "./components/Layout.tsx";
 // import {useEffect} from "react";
 // import NameChanger from "./components/NameChanger.tsx";
@@ -115,6 +116,12 @@ function App() {
                         <Route path="timer" element={<Timer/>} />
                     </Route>
 
+                </Route>
+
+                <Route path="users">
+                    <Route path=":userId">
+                        <Route index element={<UserPage/>}/>
+                    </Route>
                 </Route>
                 {/*<Route path="name-changer" element={<NameChanger />} />*/}
 
